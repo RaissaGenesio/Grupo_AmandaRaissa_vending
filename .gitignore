@@ -1,0 +1,38 @@
+# Arquivos gerados pelo Synopsys VCS
+AN.DB/
+sim/build/
+csrc/
+simv
+simv.daidir/
+ucli.key
+vc_hdrs.h
+DVEfiles/
+verdiLog/
+novas.conf
+novas.rc
+*.daidir/
+*.vpd
+*.fsdb
+*.vcd
+
+# Logs temporários
+*.log
+*.key
+*.tmp
+
+# Design Compiler
+synth/work/
+synth/alib-52/
+synth/default.svf
+*.svf
+*.pvl
+*.syn
+*.mr
+command.log
+
+# Editor e sistema operacional
+*~
+*.swp
+.DS_Store
+Thumbs.db
+
