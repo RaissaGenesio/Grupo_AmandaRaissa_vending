@@ -1,0 +1,49 @@
+ 
+****************************************
+Report : area
+Design : vending_top
+Version: X-2025.06-SP2
+Date   : Fri Jul 10 02:20:31 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    saed32rvt_tt1p05v25c (File: /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm/saed32rvt_tt1p05v25c.db)
+
+Number of ports:                          140
+Number of nets:                           393
+Number of cells:                          277
+Number of combinational cells:            213
+Number of sequential cells:                54
+Number of macros/black boxes:               0
+Number of buf/inv:                         56
+Number of references:                      16
+
+Combinational area:                502.188548
+Buf/Inv area:                       71.922752
+Noncombinational area:             357.326476
+Macro/Black Box area:                0.000000
+Net Interconnect area:             158.318056
+
+Total cell area:                   859.515023
+Total area:                       1017.833079
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  --------------
+vending_top                        859.5150    100.0   55.4034    66.5857  0.0000  vending_top
+u_comparator                        40.4089      4.7   40.4089     0.0000  0.0000  comparator
+u_control_unit                      79.5471      9.3   59.7238    19.8232  0.0000  control_unit
+u_credit_reg                       157.3151     18.3  104.4532    52.8620  0.0000  credit_reg
+u_memory                           405.3597     47.2  187.3041   218.0556  0.0000  vending_memory
+u_subtractor                        54.8951      6.4   54.8951     0.0000  0.0000  subtractor
+--------------------------------  ---------  -------  --------  ---------  ------  --------------
+Total                                                 502.1885   357.3265  0.0000
+
+1

@@ -36,3 +36,4 @@ command.log
 .DS_Store
 Thumbs.db
 
+synth/netlist/*.ddc

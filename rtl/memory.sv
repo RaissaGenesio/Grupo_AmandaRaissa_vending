@@ -12,15 +12,15 @@ module vending_memory (
 
   logic [15:0] mem [0:3];
 
-  initial begin
-    mem[0] = {8'd25,  8'd5};
-    mem[1] = {8'd50,  8'd5};
-    mem[2] = {8'd75,  8'd3};
-    mem[3] = {8'd100, 8'd2};
-  end
-
-  always @(posedge clk) begin
+  always_ff @(posedge clk) begin
     if (rst) begin
+      // Inicializacao sintetizavel da memoria
+      // Formato: {preco, estoque}
+      mem[0] <= {8'd25,  8'd5};   // Item 0: cafe
+      mem[1] <= {8'd50,  8'd5};   // Item 1
+      mem[2] <= {8'd75,  8'd3};   // Item 2
+      mem[3] <= {8'd100, 8'd2};   // Item 3
+
       price      <= 8'd0;
       stock      <= 8'd0;
       read_valid <= 1'b0;

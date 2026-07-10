@@ -1,0 +1,40 @@
+ 
+****************************************
+check_design summary:
+Version:     X-2025.06-SP2
+Date:        Fri Jul 10 02:20:31 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     13
+    Unconnected ports (LINT-28)                                    10
+    Feedthrough (LINT-29)                                           1
+    Shorted outputs (LINT-31)                                       1
+    Constant outputs (LINT-52)                                      1
+
+Cells                                                               7
+    Hier pins without driver and load (LINT-60)                     7
+--------------------------------------------------------------------------------
+
+Warning: In design 'credit_reg', port 'coin_value[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'credit_reg', port 'coin_value[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'credit_reg', port 'coin_value[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'vending_memory', port 'price[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'vending_memory', port 'stock[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'vending_memory', port 'stock[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'comparator', port 'price[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'comparator', port 'stock[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'comparator', port 'stock[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'subtractor', port 'price[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'control_unit', input port 'cancel' is connected directly to output port 'refund_load'. (LINT-29)
+Warning: In design 'control_unit', output port 'mem_write' is connected directly to output port 'dispense'. (LINT-31)
+Warning: In design 'vending_memory', output port 'stock[5]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'vending_top', input pin 'coin_value[7]' of hierarchical cell 'u_credit_reg' has no internal loads and is not connected to any nets. (LINT-60)
+Warning: In design 'vending_top', input pin 'coin_value[2]' of hierarchical cell 'u_credit_reg' has no internal loads and is not connected to any nets. (LINT-60)
+Warning: In design 'vending_top', input pin 'coin_value[0]' of hierarchical cell 'u_credit_reg' has no internal loads and is not connected to any nets. (LINT-60)
+Warning: In design 'vending_top', input pin 'price[7]' of hierarchical cell 'u_comparator' has no internal loads and is not connected to any nets. (LINT-60)
+Warning: In design 'vending_top', input pin 'stock[7]' of hierarchical cell 'u_comparator' has no internal loads and is not connected to any nets. (LINT-60)
+Warning: In design 'vending_top', input pin 'stock[6]' of hierarchical cell 'u_comparator' has no internal loads and is not connected to any nets. (LINT-60)
+Warning: In design 'vending_top', input pin 'price[7]' of hierarchical cell 'u_subtractor' has no internal loads and is not connected to any nets. (LINT-60)
+1
