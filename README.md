@@ -1,4 +1,4 @@
-# 🛒 Controlador Digital de Vending Machine em SystemVerilog
+# Controlador Digital de Vending Machine em SystemVerilog
 
 Este repositório contém o código-fonte (RTL), ambiente de verificação (Testbench) e scripts de síntese para o controlador digital síncrono de uma máquina de vendas automática (*Vending Machine*). 
 
@@ -41,7 +41,7 @@ Este projeto foi desenvolvido exclusivamente para fins acadêmicos na capacitaç
 A arquitetura do projeto separa claramente os blocos sequenciais e combinacionais. A árvore de arquivos obedece à seguinte estrutura exigida pelo protocolo do projeto:
 
 ```text
-📦 vending_machine/
+vending_machine/
  ┣ 📂 rtl/
  ┃ ┣ 📜 vending_pkg.sv     # Parâmetros, preços e codificação de estados
  ┃ ┣ 📜 credit_reg.sv      # Registrador acumulador de crédito inserido
@@ -55,6 +55,6 @@ A arquitetura do projeto separa claramente os blocos sequenciais e combinacionai
  ┣ 📂 synth/
  ┃ ┣ 📜 synth.tcl          # Script de síntese (Design Compiler)
  ┃ ┗ 📜 vending.sdc        # Constraints temporais (SDC) e definições de clock
- ┃ ┗ 📜 sweep_timing.txt
+ ┃ ┗ 📜 sweep_timing.txt   # Script auxiliar para análise de temporização pós-síntese
  ┗ 📂 reports/
    ┗ 📜 relatorio.pdf      # Relatório técnico com diagramas e análise de timing
