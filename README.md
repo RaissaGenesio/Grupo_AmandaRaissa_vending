@@ -7,22 +7,22 @@ O projeto foi desenvolvido como atividade avaliativa do módulo de **Projeto de 
 ---
 
 ## 🎯 Objetivo do Projeto
-Projetar, codificar, simular e sintetizar um hardware digital totalmente síncrono, aplicando o princípio de separação arquitetural entre a **Unidade de Controle (FSM)** e o **Caminho de Dados (Datapath)**. O sistema não possui microprocessador ou software embutido; toda a lógica de tomada de decisão, acúmulo de saldo financeiro (em ponto fixo) e controle de estoque é implementada puramente em hardware (ASIC/FPGA) utilizando **SystemVerilog**[cite: 1].
+Projetar, codificar, simular e sintetizar um hardware digital totalmente síncrono, aplicando o princípio de separação arquitetural entre a **Unidade de Controle (FSM)** e o **Caminho de Dados (Datapath)**. O sistema não possui microprocessador ou software embutido; toda a lógica de tomada de decisão, acúmulo de saldo financeiro (em ponto fixo) e controle de estoque é implementada puramente em hardware (ASIC/FPGA) utilizando **SystemVerilog**.
 
 ## ✨ Funcionalidades e Características
-* **Gerenciamento de Moedas:** Acumulador de créditos síncrono (0.25, 0.50, 1.00) suportando acúmulo contínuo até o limite de segurança em 8 bits[cite: 1].
-* **Controle de Produtos e Estoque:** Memória síncrona embarcada com suporte para 4 itens distintos (Café, Água, Suco, Snack), armazenando preços como constantes e controlando a baixa de estoque a cada venda[cite: 1].
-* **Validação Instantânea:** Hardware combinacional dedicado para comparar simultaneamente saldo e estoque, garantindo validação em 1 ciclo de clock[cite: 1].
-* **Cálculo de Troco:** Subtrator aritmético que emite o saldo remanescente com segurança após a liberação física do produto[cite: 1].
-* **Robustez:** Máquina de Estados Finitos (FSM) do tipo Moore com 6 estados (IDLE, COLLECT, CHECK, DISPENSE, CHANGE, ERROR), blindada contra *glitches* e com sistema de Reset/Cancelamento assíncrono para proteção do saldo do usuário[cite: 1].
+* **Gerenciamento de Moedas:** Acumulador de créditos síncrono (0.25, 0.50, 1.00) suportando acúmulo contínuo até o limite de segurança em 8 bits.
+* **Controle de Produtos e Estoque:** Memória síncrona embarcada com suporte para 4 itens distintos (Café, Água, Suco, Snack), armazenando preços como constantes e controlando a baixa de estoque a cada venda.
+* **Validação Instantânea:** Hardware combinacional dedicado para comparar simultaneamente saldo e estoque, garantindo validação em 1 ciclo de clock.
+* **Cálculo de Troco:** Subtrator aritmético que emite o saldo remanescente com segurança após a liberação física do produto.
+* **Robustez:** Máquina de Estados Finitos (FSM) do tipo Moore com 6 estados (IDLE, COLLECT, CHECK, DISPENSE, CHANGE, ERROR), blindada contra *glitches* e com sistema de Reset/Cancelamento assíncrono para proteção do saldo do usuário.
 
 ---
 
 ## 🛠️ Ferramentas Utilizadas
 O fluxo de desenvolvimento (*Front-End* RTL) seguiu o padrão da indústria de semicondutores:
-* **Linguagem de Descrição de Hardware:** SystemVerilog[cite: 1]
-* **Simulação e Verificação:** Synopsys VCS & Verdi (DVE)[cite: 1]
-* **Síntese Lógica e Timing:** Synopsys Design Compiler[cite: 1]
+* **Linguagem de Descrição de Hardware:** SystemVerilog
+* **Simulação e Verificação:** Synopsys VCS & Verdi (DVE)
+* **Síntese Lógica e Timing:** Synopsys Design Compiler
 
 ---
 ## 👩‍💻 Equipe
@@ -36,7 +36,7 @@ O fluxo de desenvolvimento (*Front-End* RTL) seguiu o padrão da indústria de s
 Este projeto foi desenvolvido exclusivamente para fins acadêmicos na capacitação do CI EXPERT.
 
 ## 📂 Arquitetura e Estrutura de Diretórios
-A arquitetura do projeto separa claramente os blocos sequenciais e combinacionais. A árvore de arquivos obedece à seguinte estrutura exigida pelo protocolo do projeto[cite: 1]:
+A arquitetura do projeto separa claramente os blocos sequenciais e combinacionais. A árvore de arquivos obedece à seguinte estrutura exigida pelo protocolo do projeto:
 
 ```text
 📦 vending_machine/
@@ -53,5 +53,6 @@ A arquitetura do projeto separa claramente os blocos sequenciais e combinacionai
  ┣ 📂 synth/
  ┃ ┣ 📜 synth.tcl          # Script de síntese (Design Compiler)
  ┃ ┗ 📜 vending.sdc        # Constraints temporais (SDC) e definições de clock
+ ┃ ┗ 📜 sweep_timing.txt
  ┗ 📂 reports/
    ┗ 📜 relatorio.pdf      # Relatório técnico com diagramas e análise de timing
