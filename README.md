@@ -6,10 +6,10 @@ O projeto foi desenvolvido como atividade avaliativa do módulo de **Projeto de 
 
 ---
 
-## 🎯 Objetivo do Projeto
+## Objetivo do Projeto
 Projetar, codificar, simular e sintetizar um hardware digital totalmente síncrono, aplicando o princípio de separação arquitetural entre a **Unidade de Controle (FSM)** e o **Caminho de Dados (Datapath)**. O sistema não possui microprocessador ou software embutido; toda a lógica de tomada de decisão, acúmulo de saldo financeiro (em ponto fixo) e controle de estoque é implementada puramente em hardware (ASIC/FPGA) utilizando **SystemVerilog**.
 
-## ✨ Funcionalidades e Características
+## Funcionalidades e Características
 * **Gerenciamento de Moedas:** Acumulador de créditos síncrono (0.25, 0.50, 1.00) suportando acúmulo contínuo até o limite de segurança em 8 bits.
 * **Controle de Produtos e Estoque:** Memória síncrona embarcada com suporte para 4 itens distintos (Café, Água, Suco, Snack), armazenando preços como constantes e controlando a baixa de estoque a cada venda.
 * **Validação Instantânea:** Hardware combinacional dedicado para comparar simultaneamente saldo e estoque, garantindo validação em 1 ciclo de clock.
@@ -18,24 +18,26 @@ Projetar, codificar, simular e sintetizar um hardware digital totalmente síncro
 
 ---
 
-## 🛠️ Ferramentas Utilizadas
+## Ferramentas Utilizadas
 O fluxo de desenvolvimento (*Front-End* RTL) seguiu o padrão da indústria de semicondutores:
 * **Linguagem de Descrição de Hardware:** SystemVerilog
 * **Simulação e Verificação:** Synopsys VCS & Verdi (DVE)
 * **Síntese Lógica e Timing:** Synopsys Design Compiler
 
 ---
-## 👩‍💻 Equipe
+## Equipe
 * **Amanda Gabriela**
 * **Raissa Genésio**
-* Instituto Federal da Paraíba (IFPB) E Universidade Federal De Campina Grande (UFCG)
+Instituto Federal da Paraíba (IFPB) E Universidade Federal De Campina Grande (UFCG)
 
 ---
 
-## 📄 Licença
+## Licença
 Este projeto foi desenvolvido exclusivamente para fins acadêmicos na capacitação do CI EXPERT.
 
-## 📂 Arquitetura e Estrutura de Diretórios
+---
+
+## Arquitetura e Estrutura de Diretórios
 A arquitetura do projeto separa claramente os blocos sequenciais e combinacionais. A árvore de arquivos obedece à seguinte estrutura exigida pelo protocolo do projeto:
 
 ```text
