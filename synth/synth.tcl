@@ -85,9 +85,14 @@ report_clock > $REPORT_DIR/clocks.rpt
 # Tentar corrigir violacoes de hold durante a sintese
 set_fix_hold [get_clocks clk]
 
+# Grava o guidance SVF para o Formality
+# Deve vir antes do compile_ultra para registrar as otimizacoes da sintese
+set_svf $REPORT_DIR/default.svf
+
 # ------------------------------------------------------------
 # 8. Sintese logica
 # ------------------------------------------------------------
+
 compile_ultra -no_autoungroup
 
 # ------------------------------------------------------------
